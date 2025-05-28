@@ -17,8 +17,8 @@ Given('el usuario está en la página de login', { timeout: 20000 }, async funct
 });
 
 When('se identifica con credenciales válidas', async function () {
-    await page.fill('input[name="username"]', 'jtkm5');
-    await page.fill('input[name="password"]', 'HTMharry1996');
+    await page.fill('input[name="username"]', 'jtkm5*');
+    await page.fill('input[name="password"]', 'HTMharry1996*');
     await page.click('input[name="signon"]');
 });
 
