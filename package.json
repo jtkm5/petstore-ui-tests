@@ -5,7 +5,7 @@
   "scripts": {
     "test": "cucumber-js",
     "test:html": "cucumber-js --format html:report.html",
-    "test:ci": "npx playwright install && cucumber-js --tags 'not @ignore'",
+    "test:ci": "mkdir -p reports && npx playwright install && cucumber-js --format json:reports/cucumber-report.json --tags 'not @ignore'",
     "test:smoke": "cucumber-js --tags '@smoke and not @ignore'",
     "test:debug": "PWDEBUG=1 cucumber-js"
   },
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@cucumber/cucumber": "^11.3.0",
     "@playwright/test": "^1.52.0",
+    "cucumber-html-reporter": "^7.2.0",
     "playwright": "^1.52.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
